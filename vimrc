@@ -175,7 +175,11 @@ nnoremap <Leader>y yiw                             " yank cursor word
 nnoremap <Leader>r viw"0p                          " replace cursor word with yanked word
 nnoremap <Leader>d :NERDTreeToggle<CR>             " opens/closes NerdTree
 nnoremap <Leader>f :NERDTreeFind<CR>               " opens nerdtree at the current file location, superuseful
-vnoremap <Leader>t =                               " formats selected text
+vmap  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+noremap <Leader>t =                               " formats selected text
+nnoremap <leader>1 :Ack! '\b<cword>\b'<cr>
+nnoremap <leader>2 :Ack! <cword> <cr>
 
 " Switch between splitted windows
 nmap <silent> <A-Up> :wincmd k<CR>
@@ -183,5 +187,4 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
+
