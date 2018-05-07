@@ -169,6 +169,7 @@ let NERDTreeIgnore=['\.pyc$', '\.orig$']
 let mapleader = ','
 noremap <c-X> :NERDTreeToggle<CR>
 noremap <c-A> :TagbarToggle<CR>
+noremap <c-F> :NERDTreeFind<CR>
 nnoremap <Leader>z gT
 nnoremap <Leader>x gt
 vnoremap <Leader>c gc
@@ -182,7 +183,11 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>y yiw                             " yank cursor word
 nnoremap <Leader>r viw"0p                          " replace cursor word with yanked word
 nnoremap <Leader>d :NERDTreeToggle<CR>             " opens/closes NerdTree
-nnoremap <Leader>f :NERDTreeFind<CR>               " opens nerdtree at the current file location, superuseful
+nnoremap <Leader>f za<cr>                          " fold toggle
+nnoremap <Leader>l :lopen<CR>                      " opens linter errors and warnings window
+nnoremap -l :lnext<CR>                             " jumps to next linter message
+nnoremap _L :lprev<CR>                             " jumps to previous linter message
+nnoremap _l :lprev<CR>                             " jumps to previous linter message
 vmap  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
 noremap <Leader>t =                               " formats selected text
