@@ -16,10 +16,7 @@ Plugin 'scrooloose/nerdtree'
 
 " Colorschemes plugins
 Plugin 'jsenin/molokai'
-Plugin 'skielbasa/vim-material-monokai'
-Plugin 'emhaye/ceudah.vim'
-Plugin 'dim13/smyck.vim'
-Plugin 'Heorhiy/VisualStudioDark.vim'
+Plugin 'romainl/Apprentice'
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'bling/vim-airline'
@@ -75,6 +72,14 @@ Plugin 'Shougo/neosnippet-snippets'
 " A universal set of defaults that (hopefully) everyone can agree on.
 Plugin 'tpope/vim-sensible'
 
+" https://github.com/tpope/vim-fugitive
+" A Git wrapper so awesome, it should be illegal
+Plugin 'tpope/vim-fugitive'
+
+" https://github.com/tpope/vim-rhubarb
+" GitHub extension for fugitive.vim
+Plugin 'tpope/vim-rhubarb'
+
 " https://github.com/fatih/vim-go
 " Go development plugin for Vim
 Plugin 'fatih/vim-go'
@@ -105,7 +110,9 @@ set hlsearch                  " Highlight search results
 set incsearch                 "
 set cursorline                "
 set t_Co=256                  "
-colorscheme molokai " Default colorscheme
+syntax enable
+set background=dark
+colorscheme apprentice 
 set number                    " show line number
 set foldmethod=indent
 set foldlevel=99
