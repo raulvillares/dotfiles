@@ -183,7 +183,7 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>y yiw                             " yank cursor word
 nnoremap <Leader>r viw"0p                          " replace cursor word with yanked word
 nnoremap <Leader>d :NERDTreeToggle<CR>             " opens/closes NerdTree
-nnoremap <Leader>f za<cr>                          " fold toggle
+nnoremap <Leader>f za                              " fold toggle
 nnoremap <Leader>l :lopen<CR>                      " opens linter errors and warnings window
 nnoremap -l :lnext<CR>                             " jumps to next linter message
 nnoremap _L :lprev<CR>                             " jumps to previous linter message
