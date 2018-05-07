@@ -131,8 +131,9 @@ let g:tagbar_compact = 1
 let g:ale_linters = {
 \   'python': ['pylint'],
 \}
-highlight ALEErrorSign ctermbg=18 ctermfg=1
-highlight ALEError ctermfg=1 cterm=underline
+highlight ALEErrorSign ctermbg=234 ctermfg=9
+highlight ALEError ctermfg=234 cterm=underline
+highlight ALEWarningSign ctermbg=234 ctermfg=226
 let g:ale_sign_error = '✖'
 let g:ale_sign_warning = '⚠'
 let g:ale_set_highlights = 0
