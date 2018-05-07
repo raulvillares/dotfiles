@@ -33,3 +33,4 @@ source $HOME/Library/Python/2.7/bin/virtualenvwrapper.sh
 
 alias docker-clean-unused='docker system prune --all --force --volumes'
 alias docker-clean-all='docker stop $(docker container ls -a -q) && docker system prune -a -f --volumes'
+alias remove-swp='find . -name \*.swp -type f -delete'
