@@ -200,4 +200,5 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-
+command U :normal i# -*- coding: utf-8 -*-
+command M :normal iif __name__ == '__main__':
