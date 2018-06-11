@@ -84,6 +84,10 @@ Plugin 'tpope/vim-rhubarb'
 " Go development plugin for Vim
 Plugin 'fatih/vim-go'
 
+" https://github.com/junegunn/vim-emoji
+" Emojis support
+Plugin 'junegunn/vim-emoji'
+
 " All of your Plugins must be added before the following line
 call vundle#end() " required
 
@@ -94,28 +98,30 @@ set clipboard=unnamed         " Use system clipboard
 if has('unnamedplus')
   set clipboard=unnamed,unnamedplus
 endif
-filetype plugin indent on     " Automatically detect file types.
-syntax on                     " Syntax highlighting
-set mouse=a                   " Automatically enable mouse usage
-set mousehide                 " Hide the mouse cursor while typing
-scriptencoding utf-8          "
-set nowrap                    " Do not wrap long lines
-set autoindent                " Indent at the same level of the previous line
-set expandtab                 " Tabs are spaces, not tabs
-set tabstop=2                 " An indentation every four columns
-set softtabstop=2             " Let backspace delete indent
-set shiftwidth=2              " Use indents of 4 spaces
-set ignorecase                " Case insensitive searches
-set hlsearch                  " Highlight search results
-set incsearch                 "
-set cursorline                "
-set t_Co=256                  "
+filetype plugin indent on         " Automatically detect file types.
+syntax on                         " Syntax highlighting
+set mouse=a                       " Automatically enable mouse usage
+set mousehide                     " Hide the mouse cursor while typing
+scriptencoding utf-8
+set nowrap                        " Do not wrap long lines
+set autoindent                    " Indent at the same level of the previous line
+set expandtab                     " Tabs are spaces, not tabs
+set tabstop=2                     " An indentation every four columns
+set softtabstop=2                 " Let backspace delete indent
+set shiftwidth=2                  " Use indents of 4 spaces
+set ignorecase                    " Case insensitive searches
+set hlsearch                      " Highlight search results
+set incsearch
+set cursorline
+set t_Co=256
 syntax enable
 set background=dark
 colorscheme apprentice 
-set number                    " show line number
+set number                        " show line number
 set foldmethod=indent
 set foldlevel=99
+set completefunc=emoji#complete   " emojis completion
+set omnifunc=emoji#complete
 
 let g:semanticEnableFileTypes = ['python']
 
