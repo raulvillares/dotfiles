@@ -191,6 +191,7 @@ nnoremap <Leader>r viw"0p                          " replace cursor word with ya
 nnoremap <Leader>d :NERDTreeToggle<CR>             " opens/closes NerdTree
 nnoremap <Leader>f za                              " fold toggle
 nnoremap <Leader>l :lopen<CR>                      " opens linter errors and warnings window
+nnoremap <Leader>u g~iw                            " toggles uppercase for word on cursor
 nnoremap -l :lnext<CR>                             " jumps to next linter message
 nnoremap _L :lprev<CR>                             " jumps to previous linter message
 nnoremap _l :lprev<CR>                             " jumps to previous linter message
