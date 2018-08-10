@@ -99,6 +99,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias remove-swp='find . -name \*.swp -type f -delete'
 alias mambo='clear;mamba -f documentation' $1
 alias calendario='ncal -M -C -y' $1
+alias prettyjson='python -m json.tool'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
