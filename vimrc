@@ -24,6 +24,7 @@ Plugin 'bling/vim-airline'
 " https://github.com/ctrlpvim/ctrlp.vim
 " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " https://github.com/jiangmiao/auto-pairs
 " Insert or delete brackets, parens, quotes in pair.
@@ -93,12 +94,20 @@ call vundle#end() " required
 
 " CONFIGURATIONS
 " ==============
-
-set clipboard=unnamed         " Use system clipboard
-if has('unnamedplus')
-  set clipboard=unnamed,unnamedplus
+if has("unix")
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set clipboard=unnamed
+    else
+        set clipboard=unnamedplus
+    endif
 endif
-filetype plugin indent on         " Automatically detect file types.
+
+" set clipboard=unnamed         " Use system clipboard
+" if has('unnamedplus')
+"   set clipboard=unnamed,unnamedplus
+" endif
+" filetype plugin indent on         " Automatically detect file types.
 syntax on                         " Syntax highlighting
 set mouse=a                       " Automatically enable mouse usage
 set mousehide                     " Hide the mouse cursor while typing
@@ -156,17 +165,17 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
 " Neocomplete configuration
-let g:neocomplete#enable_at_startup = 1
-" <TAB>: completion.
-  inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ neocomplete#start_manual_complete()
-  function! s:check_back_space() "{{{
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~ '\s'
-  endfunction"}}}
+" let g:neocomplete#enable_at_startup = 1
+" " <TAB>: completion.
+"   inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
+"         \ <SID>check_back_space() ? "\<TAB>" :
+"         \ neocomplete#start_manual_complete()
+"   function! s:check_back_space() "{{{
+"     let col = col('.') - 1
+"     return !col || getline('.')[col - 1]  =~ '\s'
+"   endfunction"}}}
 
-" NERDTree configuration
+" " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
 
 " KEYS MAPPINGS
@@ -200,6 +209,8 @@ omap / <Plug>(easymotion-tn)
 noremap <Leader>t =                               " formats selected text
 nnoremap <leader>1 :Ack! '\b<cword>\b'<cr>
 nnoremap <leader>2 :Ack! <cword> <cr>
+noremap <F4> :CtrlPFunky<CR>
+let g:ctrlp_funky_syntax_highlight = 1
 
 " Switch between splitted windows
 nmap <silent> <A-Up> :wincmd k<CR>
