@@ -89,6 +89,11 @@ Plugin 'fatih/vim-go'
 " Emojis support
 Plugin 'junegunn/vim-emoji'
 
+" https://github.com/ryanoasis/vim-devicons
+" Adds filetype icons
+
+Plugin 'ryanoasis/vim-devicons'
+
 " All of your Plugins must be added before the following line
 call vundle#end() " required
 
