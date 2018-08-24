@@ -149,7 +149,7 @@ let g:tagbar_compact = 1
 
 " ALE configuration
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': ['flake8'],
 \}
 highlight ALEErrorSign ctermbg=234 ctermfg=9
 highlight ALEError ctermfg=234 cterm=underline
