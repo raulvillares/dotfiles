@@ -104,7 +104,7 @@ alias prettyjson='python -m json.tool'
 # Git aliases
 alias gst='git status'
 alias gadd='git add .'
-alias gp='git pull'
+alias gpl='git pull'
 alias gpr='git pull --rebase'
 alias gdf='git diff'
 alias gps='git push'
