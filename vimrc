@@ -14,9 +14,13 @@ Plugin 'VundleVim/Vundle.vim'
 " File system explorer for the Vim editor.
 Plugin 'scrooloose/nerdtree'
 
+" Extra syntax and highlight for nerdtree files
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 " Colorschemes plugins
 Plugin 'jsenin/molokai'
 Plugin 'romainl/Apprentice'
+Plugin 'crusoexia/vim-monokai'
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'bling/vim-airline'
@@ -90,8 +94,7 @@ Plugin 'fatih/vim-go'
 Plugin 'junegunn/vim-emoji'
 
 " https://github.com/ryanoasis/vim-devicons
-" Adds filetype icons
-
+" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
 Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
