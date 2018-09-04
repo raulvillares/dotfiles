@@ -101,6 +101,14 @@ alias mambo='clear;mamba -f documentation' $1
 alias calendario='ncal -M -C -y' $1
 alias prettyjson='python -m json.tool'
 
+# Git aliases
+alias gst='git status'
+alias gadd='git add .'
+alias gp='git pull'
+alias gpr='git pull --rebase'
+alias gdf='git diff'
+alias gps='git push'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
