@@ -102,12 +102,13 @@ alias calendario='ncal -M -C -y' $1
 alias prettyjson='python -m json.tool'
 
 # Git aliases
-alias gst='git status'
-alias gadd='git add .'
-alias gpl='git pull'
-alias gpr='git pull --rebase'
-alias gdf='git diff'
-alias gps='git push'
+alias gts='git status'
+alias gta='git add .'
+alias gtpl='git pull'
+alias gtplr='git pull --rebase'
+alias gtd='git diff'
+alias gtps='git push'
+alias gtc='git commit -m' $1
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
