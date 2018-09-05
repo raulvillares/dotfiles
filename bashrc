@@ -110,6 +110,27 @@ alias gtd='git diff'
 alias gtps='git push'
 alias gtc='git commit -m' $1
 
+alias cn=change_to_repo_directory
+
+change_to_repo_directory() {
+  if [ -z "$1" ]; then
+    cd ~/repos
+  else
+    cd ~/repos/$1
+  fi
+}
+
+_cn()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    REPOS_DIR="/home/$(whoami)/repos"
+    PROJECTS=$(ls ${REPOS_DIR} | grep -m1 "^${cur}")
+    LEN=${COMPREPLY[@]}
+    COMPREPLY=${PROJECTS}
+}
+
+complete -o nospace -F _cn cn
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
