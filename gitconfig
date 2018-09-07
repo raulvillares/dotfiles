@@ -24,6 +24,7 @@
   a = add
   d = diff
   rev = rev-parse --short=7 HEAD
+  alias = config --get-regexp alias
 [push]
     default = simple
 [pull] 
