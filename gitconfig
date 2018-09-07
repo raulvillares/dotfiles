@@ -1,0 +1,32 @@
+[user]
+	name = Raúl Villares
+	email = rvillares@alea-soluciones.com
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[color]
+    ui = true
+	  diff = auto
+	  status = auto
+	  branch = auto
+[format]
+	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[alias]
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit --date=relative
+  cm = commit -m
+  c = commit
+	co = checkout
+	s = status --short -b
+	amend = commit --amend --no-edit
+  pl = pull
+  plr = pull --rebase
+  ps = push
+  a = add
+  d = diff
+  rev = rev-parse --short=7 HEAD
+[push]
+    default = simple
+[pull] 
+    default = current
+[url "git@github.com:"]
+	insteadOf = https://github.com/
