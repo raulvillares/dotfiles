@@ -101,15 +101,6 @@ alias mambo='clear;mamba -f documentation' $1
 alias calendario='ncal -M -C -y' $1
 alias prettyjson='python -m json.tool'
 
-# Git aliases
-alias gts='git status'
-alias gta='git add .'
-alias gtpl='git pull'
-alias gtplr='git pull --rebase'
-alias gtd='git diff'
-alias gtps='git push'
-alias gtc='git commit -m' $1
-
 alias cn=change_to_repo_directory
 
 change_to_repo_directory() {
