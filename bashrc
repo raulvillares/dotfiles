@@ -100,6 +100,7 @@ alias remove-swp='find . -name \*.swp -type f -delete'
 alias mambo='clear;mamba -f documentation' $1
 alias calendario='ncal -M -C -y' $1
 alias prettyjson='python -m json.tool'
+alias mytmate='tmate show-messages | grep "ssh session" | grep -v "read only"'
 
 alias cn=change_to_repo_directory
 
@@ -142,7 +143,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-function git_branch { 
+function git_branch {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
