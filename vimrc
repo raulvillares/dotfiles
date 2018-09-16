@@ -21,6 +21,8 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'jsenin/molokai'
 Plugin 'romainl/Apprentice'
 Plugin 'crusoexia/vim-monokai'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'noahfrederick/vim-hemisu'
 
 " Lean & mean status/tabline for vim that's light as air.
 Plugin 'bling/vim-airline'
