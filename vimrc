@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 
-" PLUGINS
+"' PLUGINS
 " =======
 
 " Vundle start plugin
@@ -135,7 +135,7 @@ set cursorline
 set t_Co=256
 syntax enable
 set background=dark
-colorscheme apprentice 
+colorscheme apprentice
 set number                        " show line number
 set foldmethod=indent
 set foldlevel=99
@@ -242,3 +242,8 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 command U :normal i# -*- coding: utf-8 -*-
 command M :normal iif __name__ == '__main__':
+command P pwd
+" display file name
+command FN echo expand('%:t')
+" display file full path
+command FP echo expand('%:p')
