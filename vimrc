@@ -125,9 +125,9 @@ scriptencoding utf-8
 set nowrap                        " Do not wrap long lines
 set autoindent                    " Indent at the same level of the previous line
 set expandtab                     " Tabs are spaces, not tabs
-set tabstop=2                     " An indentation every four columns
-set softtabstop=2                 " Let backspace delete indent
-set shiftwidth=2                  " Use indents of 4 spaces
+set tabstop=4                     " An indentation every four columns
+set softtabstop=4                 " Let backspace delete indent
+set shiftwidth=4                  " Use indents of 4 spaces
 set ignorecase                    " Case insensitive searches
 set hlsearch                      " Highlight search results
 set incsearch
