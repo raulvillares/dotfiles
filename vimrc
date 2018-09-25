@@ -91,13 +91,9 @@ Plugin 'tpope/vim-rhubarb'
 " Go development plugin for Vim
 Plugin 'fatih/vim-go'
 
-" https://github.com/junegunn/vim-emoji
-" Emojis support
-Plugin 'junegunn/vim-emoji'
-
 " https://github.com/ryanoasis/vim-devicons
 " Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
-Plugin 'ryanoasis/vim-devicons'
+ Plugin 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
@@ -142,6 +138,10 @@ set foldlevel=99
 set completefunc=emoji#complete   " emojis completion
 set omnifunc=emoji#complete
 
+" Improve scroll performance
+set lazyredraw
+set ttyfast
+
 let g:semanticEnableFileTypes = ['python']
 
 " Application expecific configuration
@@ -154,7 +154,7 @@ let g:tagbar_compact = 1
 
 " ALE configuration
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': ['flake8'],
 \}
 highlight ALEErrorSign ctermbg=234 ctermfg=9
 highlight ALEError ctermfg=234 cterm=underline
@@ -223,6 +223,7 @@ nnoremap <Leader>d :NERDTreeToggle<CR>             " opens/closes NerdTree
 nnoremap <Leader>f za                              " fold toggle
 nnoremap <Leader>l :lopen<CR>                      " opens linter errors and warnings window
 nnoremap <Leader>u g~iw                            " toggles uppercase for word on cursor
+nnoremap <Leader>g :Gbrowse<CR>                    " Opens browser with github page for file
 nnoremap -l :lnext<CR>                             " jumps to next linter message
 nnoremap _L :lprev<CR>                             " jumps to previous linter message
 nnoremap _l :lprev<CR>                             " jumps to previous linter message
@@ -247,3 +248,7 @@ command P pwd
 command FN echo expand('%:t')
 " display file full path
 command FP echo expand('%:p')
+" set/unset it functions to skip mamba tests
+command SKIPIT %s/it(/_it(/g
+command UNSKIPIT %s/_it(/it(/g
+
