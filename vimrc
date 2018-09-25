@@ -174,6 +174,9 @@ let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Airline will handle it...
+set noshowmode
+
 " Neocomplete configuration
 " let g:neocomplete#enable_at_startup = 1
 " " <TAB>: completion.
