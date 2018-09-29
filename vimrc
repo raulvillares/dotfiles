@@ -213,7 +213,6 @@ noremap <c-F> :NERDTreeFind<CR>
 nnoremap <Leader>z gT
 nnoremap <Leader>x gt
 vnoremap <Leader>c gc
-nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>a :ALEToggle<CR>
 nnoremap <Leader>n :noh<CR>
 nnoremap <Leader>h :split<CR>
@@ -236,6 +235,8 @@ noremap <Leader>t =                               " formats selected text
 nnoremap <leader>1 :Ack! '\b<cword>\b'<cr>
 nnoremap <leader>2 :Ack! <cword> <cr>
 noremap <F4> :CtrlPFunky<CR>
+set pastetoggle=<leader>p
+
 let g:ctrlp_funky_syntax_highlight = 1
 
 " Switch between splitted windows
