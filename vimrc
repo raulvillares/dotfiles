@@ -239,12 +239,12 @@ nmap <silent> <A-Right> :wincmd l<CR>
 " Custom commands
 " ===============
 
-command utf :normal i# -*- coding: utf-8 -*-
-command main :normal iif __name__ == '__main__':
-command where pwd
-command filename echo expand('%:t')                     " Display file name
-command filepath echo expand('%:p')                     " Display file full path
-command skipit %s/it(/_it(/g                            " Skip mamba tests
-command unskipit %s/_it(/it(/g                          " Unskip mamba tests
-command background call ToggleBackground()
-command vimrc so %
+command Utf :normal i# -*- coding: utf-8 -*-
+command Main :normal iif __name__ == '__main__':
+command Where pwd
+command Filename echo expand('%:t')                     " Display file name
+command Filepath echo expand('%:p')                     " Display file full path
+command Skipit %s/it(/_it(/g                            " Skip mamba tests
+command Unskipit %s/_it(/it(/g                          " Unskip mamba tests
+command Background call ToggleBackground()
+command Vimrc so %
