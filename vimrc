@@ -138,10 +138,10 @@ let g:airline_symbols.whitespace = 'Ξ'
 set noshowmode                                          " Ale will handle it...
 
 " Neocomplete configuration
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#sources#syntax#min_keyword_length = 3
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" :
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
