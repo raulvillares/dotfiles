@@ -70,7 +70,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
 
 " Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
- Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
+
+" Configure tabs within Terminal Vim
+Plugin 'mkitt/tabline.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end() " required
@@ -148,6 +151,9 @@ let NERDTreeIgnore=['\.pyc$', '\.orig$']
 
 " Ctrlp Funky configuration
 let g:ctrlp_funky_syntax_highlight = 1
+
+" Tabline configuration
+let g:tablineclosebutton=1
 
 " Custom functions
 " ================
