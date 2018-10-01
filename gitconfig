@@ -12,7 +12,7 @@
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [alias]
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)an>%Creset' --abbrev-commit --date=relative
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) %Creset' --abbrev-commit --date=relative
   cm = commit -m
   c = commit
 	co = checkout
@@ -27,7 +27,7 @@
   alias = config --get-regexp alias
 [push]
     default = simple
-[pull] 
+[pull]
     default = current
 [url "git@github.com:"]
 	insteadOf = https://github.com/
