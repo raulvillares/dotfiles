@@ -220,6 +220,16 @@ nnoremap <Leader>u g~iw                                 " toggles uppercase for 
 nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
 nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
 nnoremap <Leader>l :call ToggleCursorline()<CR>
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
+
 set pastetoggle=<leader>p
 
 nnoremap -l :lnext<CR>                                  " jumps to next linter message
