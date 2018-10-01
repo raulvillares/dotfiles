@@ -226,8 +226,6 @@ nnoremap -l :lnext<CR>                                  " jumps to next linter m
 nnoremap -k :lprev<CR>                                  " jumps to previous linter message
 vmap  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-nnoremap <c-1>1 :Ack! '\b<cword>\b'<CR>
-nnoremap <c-2>2 :Ack! <cword> <CR>
 noremap <c-F> :CtrlPFunky<CR>
 
 " Switch between splitted windows
@@ -247,4 +245,8 @@ command Filepath echo expand('%:p')                     " Display file full path
 command Skipit %s/it(/_it(/g                            " Skip mamba tests
 command Unskipit %s/_it(/it(/g                          " Unskip mamba tests
 command Background call ToggleBackground()
+command Contains Ack! '\b<cword>\b'
+command Word Ack! <cword>
+command Class Ack! "class "<cword>
+command Def Ack! "def "<cword>
 command Vimrc so %
