@@ -215,7 +215,6 @@ nnoremap <Leader>q :q<CR>
 nnoremap <Leader>y yiw                                  " yank cursor word
 nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
 nnoremap <Leader>f za                                   " fold toggle
-nnoremap <Leader>l :lopen<CR>                           " opens linter errors and warnings window
 nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
 nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
 nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
@@ -259,4 +258,5 @@ command Contains Ack! '\b<cword>\b'
 command Word Ack! <cword>
 command Class Ack! "class "<cword>
 command Def Ack! "def "<cword>
+command Linter lopen
 command Vimrc so %
