@@ -200,8 +200,6 @@ endfunction
 " ===========
 
 map <c-X> :NERDTreeToggle<CR>
-map <c-Y> :NERDTreeFind<CR>
-map <c-A> :TagbarToggle<CR>
 
 let mapleader = ' '
 nnoremap <Leader>1 1gt
@@ -220,15 +218,18 @@ nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with git
 nnoremap <Leader>h :split<CR>
 nnoremap <Leader>l :call ToggleCursorline()<CR>
 nnoremap <Leader>n :noh<CR>
+set pastetoggle=<leader>p
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
+nnoremap <Leader>t :NERDTreeToggle<CR>
+nnoremap <Leader>y :NERDTreeFind<CR>
+nnoremap <Leader>0 : TagbarToggle<CR>
 nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x gt
-nnoremap <Leader>z gT
 nnoremap <Leader>y yiw                                  " yank cursor word
-set pastetoggle=<leader>p
+nnoremap <Leader>z gT
 
 nnoremap -l :lnext<CR>                                  " jumps to next linter message
 nnoremap -k :lprev<CR>                                  " jumps to previous linter message
