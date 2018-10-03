@@ -249,10 +249,10 @@ nmap <silent> <A-Right> :wincmd l<CR>
 command Utf :normal i# -*- coding: utf-8 -*-
 command Main :normal iif __name__ == '__main__':
 command Where pwd
-command Filename echo expand('%:t')                     " Display file name
-command Filepath echo expand('%:p')                     " Display file full path
-command Skipit %s/it(/_it(/g                            " Skip mamba tests
-command Unskipit %s/_it(/it(/g                          " Unskip mamba tests
+command Filename echo expand("%:t")|                     " Display file name (| character separates commands)
+command Filepath echo expand("%:p")|                     " Display file full path
+command Skipit %s/it(/_it(/g|                            " Skip mamba tests
+command Unskipit %s/_it(/it(/g|                          " Unskip mamba tests
 command Background call ToggleBackground()
 command Contains Ack! '\b<cword>\b'
 command Word Ack! <cword>
