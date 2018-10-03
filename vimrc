@@ -204,21 +204,6 @@ map <c-Y> :NERDTreeFind<CR>
 map <c-A> :TagbarToggle<CR>
 
 let mapleader = ' '
-nnoremap <Leader>z gT
-nnoremap <Leader>x gt
-nnoremap <Leader>a :ALEToggle<CR>
-nnoremap <Leader>n :noh<CR>
-nnoremap <Leader>h :split<CR>
-nnoremap <Leader>v :vsplit<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :q<CR>
-nnoremap <Leader>y yiw                                  " yank cursor word
-nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
-nnoremap <Leader>f za                                   " fold toggle
-nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
-nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
-nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
-nnoremap <Leader>l :call ToggleCursorline()<CR>
 nnoremap <Leader>1 1gt
 nnoremap <Leader>2 2gt
 nnoremap <Leader>3 3gt
@@ -228,7 +213,21 @@ nnoremap <Leader>6 6gt
 nnoremap <Leader>7 7gt
 nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
-
+nnoremap <Leader>a :ALEToggle<CR>
+nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
+nnoremap <Leader>f za                                   " fold toggle
+nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
+nnoremap <Leader>h :split<CR>
+nnoremap <Leader>l :call ToggleCursorline()<CR>
+nnoremap <Leader>n :noh<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
+nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x gt
+nnoremap <Leader>z gT
+nnoremap <Leader>y yiw                                  " yank cursor word
 set pastetoggle=<leader>p
 
 nnoremap -l :lnext<CR>                                  " jumps to next linter message
