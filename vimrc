@@ -222,7 +222,7 @@ set pastetoggle=<leader>p
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
 nnoremap <Leader>t :NERDTreeToggle<CR>
-nnoremap <Leader>y :NERDTreeFind<CR>
+nnoremap <Leader>s :NERDTreeFind<CR>
 nnoremap <Leader>0 : TagbarToggle<CR>
 nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
 nnoremap <Leader>v :vsplit<CR>
