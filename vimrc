@@ -12,7 +12,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Colorschemes
 Plugin 'romainl/Apprentice'
-Plugin 'NLKNguyen/papercolor-theme'
 
 " File system explorer for the Vim editor.
 Plugin 'scrooloose/nerdtree'
@@ -154,6 +153,11 @@ let g:ctrlp_funky_syntax_highlight = 1
 
 " Tabline configuration
 let g:tablineclosebutton=1
+
+" NERDTree Syntax Highlight configuration
+
+let g:NERDTreeLimitedSyntax = 1
+let g:NERDTreeHighlightCursorline = 0
 
 " Custom functions
 " ================
