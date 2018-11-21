@@ -14,6 +14,6 @@
     "openInGitHub.useLocalBranch": true, // Use the local branch instead of the fixed remote branch
     "openInGitHub.useLocalRange": true, // Highlight the local selection range, if there's one
     "openInGitHub.useLocalLine": true,
-    "python.envFile": "~/.virtualenvs/${workspaceFolder}",
+    "python.envFile": "~/.virtualenvs/${workspaceFolderBasename}",
     "files.trimTrailingWhitespace": true // Highlight the local line if there's no selection range
 }
