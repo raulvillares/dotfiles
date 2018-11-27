@@ -12,19 +12,23 @@
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
 [alias]
-	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) %Creset' --abbrev-commit --date=relative
-  cm = commit -m
-  c = commit
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) %Creset' --abbrev-commit --date=relative
+    cm = commit -m
+    c = commit
 	co = checkout
 	s = status --short -b
 	amend = commit --amend --no-edit
-  pl = pull
-  plr = pull --rebase
-  ps = push
-  a = add
-  d = diff
-  rev = rev-parse --short=7 HEAD
-  alias = config --get-regexp alias
+    pl = pull
+    plr = pull --rebase
+    ps = push
+    a = add
+    d = diff
+    rev = rev-parse --short=7 HEAD
+    lg = !"git lg1-specific --all"
+    lg1-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+    projects = !"find -maxdepth 2 -type d -name '*.git' -exec dirname {} \\;"
+    fetchall = !"bash -c 'update() { for project in $(git projects); do pushd $project; git fetch; popd; done ; }; update;'"
+    summary = !"bash -c 'update() { for project in $(git projects); do pushd $project; git log origin/master --pretty=format:\"${project} %aI %h %s (%cn <%ce>)\" --since=\"2 weeks ago\" ; popd; done | grep -v '^~/'; }; update;'"    alias = config --get-regexp alias
 [push]
     default = simple
 [pull]
