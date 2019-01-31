@@ -89,6 +89,7 @@ filetype plugin indent on                               " Automatically detect f
 syntax on                                               " Syntax highlighting
 set mouse=a                                             " Automatically enable mouse usage
 set mousehide                                           " Hide the mouse cursor while typing
+set cursorline
 scriptencoding utf-8                                    " UTF-8 encoding
 set nowrap                                              " Do not wrap long lines
 set autoindent                                          " Indent at the same level of the previous line
@@ -147,17 +148,15 @@ set noshowmode                                          " Ale will handle it...
 
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.orig$']
+let NERDTreeShowHidden=1
+let g:NERDTreeLimitedSyntax = 1
+let g:NERDTreeHighlightCursorline = 1
 
 " Ctrlp Funky configuration
 let g:ctrlp_funky_syntax_highlight = 1
 
 " Tabline configuration
 let g:tablineclosebutton=1
-
-" NERDTree Syntax Highlight configuration
-
-let g:NERDTreeLimitedSyntax = 1
-let g:NERDTreeHighlightCursorline = 0
 
 " Custom functions
 " ================
@@ -257,6 +256,7 @@ command Filename echo expand("%:t")|                     " Display file name (| 
 command Filepath echo expand("%:p")|                     " Display file full path
 command Skipit %s/it(/_it(/g|                            " Skip mamba tests
 command Unskipit %s/_it(/it(/g|                          " Unskip mamba tests
+command Unfocusit %s/ fit(/ it(/g|                       " Unfocus mamba tests
 command Background call ToggleBackground()
 command Contains Ack! '\b<cword>\b'
 command Word Ack! <cword>
