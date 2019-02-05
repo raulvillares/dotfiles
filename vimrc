@@ -203,6 +203,11 @@ endfunction
 " ===========
 
 map <c-X> :NERDTreeToggle<CR>
+"
+" Key maps to emulate the system clipboard
+:vnoremap <c-c> "+y
+:inoremap <c-v> <ESC>"+pa
+:vnoremap <c-d> "+d
 
 let mapleader = ' '
 nnoremap <Leader>1 1gt
