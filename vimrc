@@ -74,6 +74,9 @@ Plugin 'ryanoasis/vim-devicons'
 " Configure tabs within Terminal Vim
 Plugin 'mkitt/tabline.vim'
 
+" Go development plugin for Vim
+Plugin 'fatih/vim-go'
+
 " All of your Plugins must be added before the following line
 call vundle#end() " required
 
@@ -124,8 +127,8 @@ let g:ale_linters = {
 highlight ALEErrorSign ctermbg=234 ctermfg=9
 highlight ALEError ctermfg=234 cterm=underline
 highlight ALEWarningSign ctermbg=234 ctermfg=226
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
 let g:ale_set_highlights = 0
 
 " Airline configuration
@@ -250,6 +253,8 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+inoremap jj <Esc>
 
 " Custom commands
 " ===============
