@@ -83,10 +83,7 @@ call vundle#end() " required
 " Defaults
 " ========
 
-set clipboard=unnamed                                   " Use system clipboard
-if has('unnamedplus')
-    set clipboard=unnamed,unnamedplus
-endif
+set clipboard=unnamedplus                               " Use system clipboard
 
 filetype plugin indent on                               " Automatically detect file types.
 syntax on                                               " Syntax highlighting
@@ -206,12 +203,11 @@ endfunction
 " ===========
 
 map <c-X> :NERDTreeToggle<CR>
-"
-" Key maps to emulate the system clipboard
-:vnoremap <c-c> "+y
-:inoremap <c-v> <ESC>"+pa
-:vnoremap <c-d> "+d
 
+:inoremap <C-v> <ESC>"+pa
+:vnoremap <C-c> "+y
+
+"
 let mapleader = ' '
 nnoremap <Leader>1 1gt
 nnoremap <Leader>2 2gt
