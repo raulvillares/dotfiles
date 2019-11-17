@@ -268,5 +268,6 @@ command Contains Ack! '\b<cword>\b'
 command Word Ack! <cword>
 command Class Ack! "class "<cword>
 command Def Ack! "def "<cword>
+command Spec Ack! <cword>"\(" | grep "spec.py"
 command Linter lopen
 command Vimrc so %
