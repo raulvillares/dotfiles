@@ -83,8 +83,7 @@ call vundle#end() " required
 " Defaults
 " ========
 
-set clipboard=unnamedplus                               " Use system clipboard
-
+set clipboard^=unnamed,unnamedplus
 filetype plugin indent on                               " Automatically detect file types.
 syntax on                                               " Syntax highlighting
 set mouse=a                                             " Automatically enable mouse usage
