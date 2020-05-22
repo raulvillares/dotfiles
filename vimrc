@@ -236,6 +236,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>x gt
 nnoremap <Leader>y yiw                                  " yank cursor word
 nnoremap <Leader>z gT
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>		" replace text
 
 nnoremap -l :lnext<CR>                                  " jumps to next linter message
 nnoremap -k :lprev<CR>                                  " jumps to previous linter message
@@ -268,5 +269,6 @@ command Word Ack! <cword>
 command Class Ack! "class "<cword>
 command Def Ack! "def "<cword>
 command Spec Ack! <cword>"\(" | grep "spec.py"
+command Mambo ! clear && mamba -f documentation %:p
 command Linter lopen
 command Vimrc so %
