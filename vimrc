@@ -83,7 +83,8 @@ call vundle#end() " required
 " Defaults
 " ========
 
-set clipboard^=unnamed,unnamedplus
+set clipboard=unnamedplus                               " Use system clipboard
+
 filetype plugin indent on                               " Automatically detect file types.
 syntax on                                               " Syntax highlighting
 set mouse=a                                             " Automatically enable mouse usage
@@ -157,6 +158,12 @@ let g:ctrlp_funky_syntax_highlight = 1
 " Tabline configuration
 let g:tablineclosebutton=1
 
+
+" Go configuration
+
+let g:go_fmt_command = "goimports"
+let go_fmt_autosave = 1
+
 " Custom functions
 " ================
 
@@ -207,7 +214,7 @@ map <c-X> :NERDTreeToggle<CR>
 :vnoremap <C-c> "+y
 
 "
-let mapleader = ' '
+let mapleader = ','
 nnoremap <Leader>1 1gt
 nnoremap <Leader>2 2gt
 nnoremap <Leader>3 3gt
@@ -266,9 +273,13 @@ command Unfocusit %s/ fit(/ it(/g|                       " Unfocus mamba tests
 command Background call ToggleBackground()
 command Contains Ack! '\b<cword>\b'
 command Word Ack! <cword>
+nnoremap <F1> :Ack! <cword><CR>
 command Class Ack! "class "<cword>
+nnoremap <F2> :Ack! "class "<cword><CR>
 command Def Ack! "def "<cword>
+nnoremap <F3> :Ack! "def "<cword><CR>
 command Spec Ack! <cword>"\(" | grep "spec.py"
 command Mambo ! clear && mamba -f documentation %:p
+nnoremap <F5> :! clear && mamba -f documentation %:p
 command Linter lopen
 command Vimrc so %
