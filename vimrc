@@ -226,7 +226,8 @@ nnoremap <Leader>8 8gt
 nnoremap <Leader>9 9gt
 nnoremap <Leader>a :ALEToggle<CR>
 nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
-nnoremap <Leader>f za                                   " fold toggle
+nnoremap <space> za                                     " fold toggle
+vnoremap <space> za                                     " fold toggle
 nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
 nnoremap <Leader>h :split<CR>
 nnoremap <Leader>l :call ToggleCursorline()<CR>
