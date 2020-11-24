@@ -1,0 +1,214 @@
+" Plugins
+" =======
+
+" Colorschemes
+Plugin 'romainl/Apprentice'
+
+" Extra syntax and highlight for nerdtree files
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plugin 'tacahiroy/ctrlp-funky'
+
+" Insert or delete brackets, parens, quotes in pair.
+Plugin 'jiangmiao/auto-pairs'
+
+" Provides an easy way to browse the tags of the current file and get an overview of its structure.
+" https://andrew.stwrt.ca/posts/vim-ctags/
+Plugin 'majutsushi/tagbar'
+
+" Simpler way to use some motions in vim
+Plugin 'easymotion/vim-easymotion'
+
+" Lean & mean status/tabline for vim that's light as air.
+Plugin 'bling/vim-airline'
+
+" Linting while you edit your text files.
+Plugin 'w0rp/ale'
+
+" Shows a git diff in the 'gutter' (sign column). It shows whether each line has been added, modified, and where lines have been removed.
+Plugin 'airblade/vim-gitgutter'
+
+" Run your favorite search tool from Vim, with an enhanced results list.
+Plugin 'mileszs/ack.vim'
+
+" Place, toggle and display marks.
+Plugin 'kshenoy/vim-signature'
+
+" Keyword completion system by maintaining a cache of keywords in the current buffer.
+Plugin 'Shougo/neocomplete.vim'
+
+" A universal set of defaults that (hopefully) everyone can agree on.
+Plugin 'tpope/vim-sensible'
+
+" A Git wrapper so awesome, it should be illegal
+Plugin 'tpope/vim-fugitive'
+
+" GitHub extension for fugitive.vim
+Plugin 'tpope/vim-rhubarb'
+
+" Adds file type glyphs/icons to popular Vim plugins: NERDTree, vim-airline, Powerline, Unite, vim-startify and more
+Plugin 'ryanoasis/vim-devicons'
+
+" Configure tabs within Terminal Vim
+Plugin 'mkitt/tabline.vim'
+
+call vundle#end()
+
+" Defaults
+" ========
+
+set clipboard=unnamedplus                               " Use system clipboard
+
+set mouse=a                                             " Automatically enable mouse usage
+set mousehide                                           " Hide the mouse cursor while typing
+set cursorline
+scriptencoding utf-8                                    " UTF-8 encoding
+set nowrap                                              " Do not wrap long lines
+set ignorecase                                          " Case insensitive searches
+set hlsearch                                            " Highlight search results
+set incsearch                                           " Incremental searches
+set t_Co=256                                            " Enable 256 colors
+syntax enable                                           " Enable syntax
+set background=dark                                     " Dark background
+colorscheme apprentice                                  " Default colorscheme
+set number                                              " Show line number
+set foldmethod=indent                                   " Fold method
+set foldlevel=99                                        " Fold level
+set lazyredraw                                          " Improves scroll performance
+set ttyfast                                             " Improves scroll performance
+
+" Application especific configuration
+" ==================================
+
+" Tagbar configuration
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
+
+" ALE configuration
+let g:ale_linters = {
+\   'python': ['pylint'],
+\}
+highlight ALEErrorSign ctermbg=234 ctermfg=9
+highlight ALEError ctermfg=234 cterm=underline
+highlight ALEWarningSign ctermbg=234 ctermfg=226
+let g:ale_sign_error = 'X'
+let g:ale_sign_warning = '!'
+let g:ale_set_highlights = 0
+
+" Airline configuration
+let g:airline#extensions#ale#enabled = 1
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+set noshowmode                                          " Ale will handle it...
+
+" NERDTree configuration
+let g:NERDTreeLimitedSyntax = 1
+let g:NERDTreeHighlightCursorline = 1
+
+" Ctrlp Funky configuration
+let g:ctrlp_funky_syntax_highlight = 1
+
+" Tabline configuration
+let g:tablineclosebutton=1
+
+" Go configuration
+
+let go_fmt_autosave = 1
+
+" Custom functions
+" ================
+
+" Toggles column highligting
+fu! ToggleCursorcolumn ()
+  if &cursorcolumn
+    set nocursorcolumn
+  else
+    set cursorcolumn
+  endif
+endfunction
+
+" Toggles line highligting
+fu! ToggleCursorline ()
+  if &cursorline
+    set nocursorline
+  else
+    set cursorline
+  endif
+endfunction
+
+" Key binding
+" ===========
+
+:inoremap <C-v> <ESC>"+pa
+:vnoremap <C-c> "+y
+
+nnoremap <Leader>1 1gt
+nnoremap <Leader>2 2gt
+nnoremap <Leader>3 3gt
+nnoremap <Leader>4 4gt
+nnoremap <Leader>5 5gt
+nnoremap <Leader>6 6gt
+nnoremap <Leader>7 7gt
+nnoremap <Leader>8 8gt
+nnoremap <Leader>9 9gt
+nnoremap <Leader>a :ALEToggle<CR>
+nnoremap <Leader>c :call ToggleCursorcolumn()<CR>
+nnoremap <Leader>g :Gbrowse<CR>                         " Opens browser with github page for file
+nnoremap <Leader>h :split<CR>
+nnoremap <Leader>l :call ToggleCursorline()<CR>
+nnoremap <Leader>n :noh<CR>
+set pastetoggle=<leader>p
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>y yiw                                  " yank cursor word
+nnoremap <Leader>r viw"0p                               " replace cursor word with yanked word
+nnoremap <Leader>0 :TagbarToggle<CR>
+nnoremap <Leader>u g~iw                                 " toggles uppercase for word on cursor
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>x gt
+nnoremap <Leader>z gT
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>		" replace text
+vnoremap <Leader>f :CtrlPFunky<CR>
+
+nnoremap -l :lnext<CR>                                  " jumps to next linter message
+nnoremap -k :lprev<CR>                                  " jumps to previous linter message
+vmap  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" Switch between splitted windows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+inoremap jj <Esc>
+
+" Custom commands
+" ===============
+
+command Utf :normal i# -*- coding: utf-8 -*-
+command Main :normal iif __name__ == '__main__':
+command Where pwd
+command Filename echo expand("%:t")|                     " Display file name (| character separates commands)
+command Filepath echo expand("%:p")|                     " Display file full path
+command Skipit %s/it(/_it(/g|                            " Skip mamba tests
+command Unskipit %s/_it(/it(/g|                          " Unskip mamba tests
+command Unfocusit %s/ fit(/ it(/g|                       " Unfocus mamba tests
+command Contains Ack! '\b<cword>\b'
+command Word Ack! <cword>
+nnoremap <F1> :Ack! <cword><CR>
+command Class Ack! "class "<cword>
+nnoremap <F2> :Ack! "class "<cword><CR>
+command Def Ack! "def "<cword>
+nnoremap <F3> :Ack! "def "<cword><CR>
+command Spec Ack! <cword>"\(" | grep "spec.py"
+command Mambo ! clear && mamba -f documentation %:p
+nnoremap <F5> :! clear && mamba -f documentation %:p
+command Linter lopen
