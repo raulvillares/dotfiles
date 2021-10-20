@@ -66,6 +66,7 @@ set cursorline
 scriptencoding utf-8                                    " UTF-8 encoding
 set nowrap                                              " Do not wrap long lines
 set ignorecase                                          " Case insensitive searches
+set smartcase                                           " Smart case searches
 set hlsearch                                            " Highlight search results
 set incsearch                                           " Incremental searches
 set t_Co=256                                            " Enable 256 colors
@@ -142,6 +143,7 @@ fu! ToggleCursorline ()
     set cursorline
   endif
 endfunction
+
 
 " Key binding
 " ===========
