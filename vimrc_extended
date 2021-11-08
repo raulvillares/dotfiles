@@ -78,6 +78,8 @@ set foldmethod=indent                                   " Fold method
 set foldlevel=99                                        " Fold level
 set lazyredraw                                          " Improves scroll performance
 set ttyfast                                             " Improves scroll performance
+set splitbelow                                          " Change direction of horizontal split
+set splitright                                          " Change direction of vertizal split
 
 " Application especific configuration
 " ==================================
